@@ -1,0 +1,243 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: black;
+    padding: 0;
+}
+/* Menu links */
+header {
+  text-align: center;
+  color: white;
+  padding: 10px 20px;
+  position: relative;
+  top: 50px;
+  margin-right: 5px;
+}
+
+header nav {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+
+
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+   justify-content: right;
+  padding: 0;
+  margin: 0;
+  
+}
+
+header nav ul li a {
+    color: rgb(227, 226, 226);
+    text-decoration: none;
+    transition: color 0.3s;
+    display: flex;        
+    align-items: center;  
+    gap: 8px;  
+    font-size: 1rem;          
+}
+
+header nav ul li a:hover {
+  color: #0328cb;
+}
+
+
+
+.efeito::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #f7f4f4, #0080ff);
+    transition: width 0.5s ease;
+}
+
+.efeito:hover::after {
+    width: 45%;
+}
+
+.efeito {
+    position: relative;
+   display: block;
+    font-size: 2rem;
+    color: white;
+  
+}
+
+
+
+
+
+/*pro seçao de projeto */
+
+.projetos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  justify-content: center;
+  margin-top: 30px;
+  
+  
+}
+
+.card-projeto {
+  background: #151313;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 20px;
+  transition: transform 0.3s ease;
+  margin-bottom: 10px;
+  color:white;
+}
+
+
+
+
+.card-projeto p {
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+.card-projeto h3{
+  font-size: 25px;
+
+}
+
+
+.card-projeto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  
+  
+}
+
+
+#MeusProjetos {
+  padding-top: 100px;
+  padding-bottom: 50px;
+  min-height: calc(100vh - 150px);
+  
+}
+
+.container-MeusProjetos {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+.texto-MeusProjetos {
+  color: white;
+
+}
+
+.texto-MeusProjetos h1 {
+  font-size: 44px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  text-align: center;
+  
+}
+
+
+
+
+
+.titulo-secao {
+    position: relative;
+    display: inline-block;
+    font-size: 2rem;
+    color: white;
+}
+
+.titulo-secao::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #00ffff, #0080ff);
+    transition: width 0.5s ease;
+}
+
+.titulo-secao:hover::after {
+    width: 100%;
+}
+
+.btn, .btn2 {
+  color: rgb(35, 90, 207);
+  text-decoration:double;
+  font-style:oblique;
+
+}
+
+.btn:hover{
+  color: rgb(255, 255, 255);
+  transition: 0.3s;
+}
+.btn2:hover{
+  color: rgb(255, 255, 255);
+  transition: 0.3s;
+}
+
+.btn2 {
+  margin-left: 10px;
+}
+
+.tecnologias {
+margin-bottom: 30px;
+}
+
+
+.tech {
+  background-color: #0a66c2;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+
+
+.tech {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 2px solid #333;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* EFEITO NEON no hover */
+.tech:hover {
+    color: #ffffff;
+    border-color: #00ffff;
+    box-shadow: 
+        0 0 10px #00ffff,
+        0 0 20px #0d25b0,
+        0 0 30px #253232;
+    text-shadow: 0 0 10px #0033ff;
+    transform: translateY(-2px);
+}
+
+
+/* Cards aparecem com delay */
+.card-projeto:nth-child(1) { animation-delay: 0.1s; }
+.card-projeto:nth-child(2) { animation-delay: 0.2s; }
+
+/* Hover mais suave */
+.card-projeto:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,255,255,0.1);
+}

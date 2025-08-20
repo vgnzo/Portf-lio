@@ -1,0 +1,235 @@
+html, body {
+    overflow: hidden; /* se quiser, remove a rolagem */
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: black;
+    padding: 0;
+}
+
+/* Menu  links*/
+header {
+  text-align: center;
+  color: white;
+  padding: 10px 20px;
+  position: relative;
+  top: 50px;
+  margin-right: 9px;
+}
+
+header nav {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+
+
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+   justify-content: right;
+  padding: 0;
+  margin: 0;
+  
+}
+
+header nav ul li a {
+    color: rgb(227, 226, 226);
+    text-decoration: none;
+    transition: color 0.3s;
+    display: flex;        
+    align-items: center;  
+    gap: 8px;  
+    font-size: 1rem;          
+}
+
+header nav ul li a:hover {
+  color: #0328cb;
+}
+
+header nav h1 {
+    margin: 0;
+    color: rgb(255, 252, 252);
+    
+}
+
+
+.efeito::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #f7f4f4, #0080ff);
+    transition: width 0.5s ease;
+}
+
+.efeito:hover::after {
+    width: 100%;
+}
+
+.efeito {
+    position: relative;
+    display: inline-block;
+    font-size: 2rem;
+    color: white;
+}
+
+
+
+
+
+
+
+/* Seção Apresentação */
+#apresentacao {
+ text-align: left;
+    padding-top: 150px; /* quanto maior o número, mais baixo fica */
+  
+ 
+
+}
+
+/* Container que organiza foto e texto */
+.container-apresentacao {
+    display: flex;
+    align-items: center;             /* centraliza verticalmente */
+    justify-content: space-between;  /* espaço entre texto e foto */
+    gap: 20px;                       /* distância entre elementos */
+}
+
+/* Texto da apresentação */
+.texto-apresentacao {
+    max-width: 900px;
+    color: white;
+   margin-left: 150px;
+  
+ 
+   
+}
+
+.texto-apresentacao h1 {
+    font-size: 44px;
+    font-weight: bold;
+    margin-bottom: 35px;   /*distancia de uma linha pra outra*/
+    margin-top: 30px;
+   
+  }
+
+.texto-apresentacao h3 {
+    font-size: 26px;
+    color: #ffffff;
+    margin-bottom: 25px;
+}
+
+.texto-apresentacao p {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Foto */
+#apresentacao img {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;  /* deixa circular */
+    object-fit: cover;
+    margin-right: 100px;
+    float: none;         /* remove float antigo */
+}
+
+.foto-animada {
+    position: relative;  /* referência para o rastro */
+    display: inline-block;
+    width: 260px;        /* tamanho da foto */
+    height: 260px;
+    margin-right: 100px; /* mantém a margem antiga */
+    float: none;         
+}
+
+/* Foto */
+.foto-animada img {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    object-fit: cover;
+    display: block;      /* evita espaços em linha */
+}
+
+/* Rastro girando */
+.rastro {
+    position: absolute;
+    top: 54.3%;
+    left: 55%;
+   width: 260px;
+   height: 260px;
+    margin: -145px 0 0 -145px; /* centraliza o rastro no meio da foto */
+    border: 3px solid transparent;
+    border-top: 3px solid #0A66C2; /* traço visível */
+    border-radius: 50%;
+    animation: girar-rastro 2s linear infinite;
+    pointer-events: none; /* para não interferir com a foto */
+}
+
+@keyframes girar-rastro {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+
+
+.menu-icones {
+  display: flex;
+  gap: 35px; /* distância entre os ícones */
+  margin-top: 20px; /* espaço abaixo do texto ou menu */
+   justify-content: flex-start; /* alinha à esquerda */
+  margin-left: 150px;     
+  
+}
+
+.menu-icones a {
+  color: white; /* cor dos ícones */
+  font-size: 37px; /* tamanho dos ícones */
+  transition: color 0.3s;
+
+    display: flex;
+  gap: 20px; /* distância entre os ícones */
+  justify-content: center; /* centraliza horizontalmente */
+  margin-top: 20px; /* espaço abaixo do texto ou menu */
+}
+
+/* Cores individuais */
+.menu-icones a.linkedin { color: #0A66C2; }  /* azul LinkedIn */
+.menu-icones a.github   { color: #3b3636; }  /* preto GitHub */
+.menu-icones a.twitter  { color: #1DA1F2; }  /* azul Twitter */
+.menu-icones a.instagram  { color: #a300a9; }
+
+/* Hover individual se quiser mudar ao passar o mouse */
+.menu-icones a.linkedin:hover { color: #ffffff; }
+.menu-icones a.github:hover   { color: #e2e2e2; }
+.menu-icones a.twitter:hover  { color: #e2e7ea; }
+.menu-icones a.instagram:hover  { color: #e9e7ea; }
+.menu-icones a.btn-cv:hover {
+  background-color: #e0e0e0;  /* vermelho mais escuro ao passar o mouse */
+}
+
+.menu-icones a.btn-cv {
+
+  font-size: 24px;  
+  background-color: #e21111;  /* vermelho */
+  color: white;               /* texto e ícone branco */
+  padding: 5px 10px;          /* espaço interno do botão */
+  border-radius: 10px;         /* cantos arredondados */
+  text-decoration: none;      /* remove underline */
+  display: flex;              /* pra alinhar ícone e texto */
+  gap: 8px;                   /* espaço entre ícone e texto */
+  transition: background 0.3s; /* efeito suave ao passar o mouse */
+}
