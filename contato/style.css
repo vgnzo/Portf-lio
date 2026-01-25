@@ -111,7 +111,8 @@ header nav ul li a:hover {
   border-radius: 12px;
   padding: 30px;
   text-align: center;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s;
+  will-change: transform;
 }
 
 .contato-card:hover {
@@ -120,6 +121,7 @@ header nav ul li a:hover {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
 }
 
+/* ÍCONES — MESMA POSIÇÃO DE ANTES */
 .contato-card i {
   font-size: 3rem;
   color: #58a6ff;
@@ -132,7 +134,7 @@ header nav ul li a:hover {
 }
 
 .contato-card p {
-  color: #8b949e;
+  color: #b1bac4;
   margin-bottom: 20px;
 }
 
@@ -145,6 +147,7 @@ header nav ul li a:hover {
   border-radius: 6px;
   text-decoration: none;
   font-weight: 500;
+  min-width: 160px;
   transition: background-color 0.3s, transform 0.3s;
 }
 
@@ -190,5 +193,16 @@ header nav ul li a:hover {
 
   .contato-card {
     padding: 25px;
+  }
+}
+
+/* EXTRA — CELULAR PEQUENO */
+@media (max-width: 480px) {
+  .contato-card i {
+    font-size: 2.5rem;
+  }
+
+  .contato-card h3 {
+    font-size: 1.25rem;
   }
 }

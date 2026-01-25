@@ -1,6 +1,6 @@
 html, body {
-    overflow: hidden; /* se quiser, remove a rolagem */
-    height: auto;
+    overflow-x: hidden; /* se quiser, remove a rolagem */
+    height: 100vh;
 }
 
 body {
@@ -146,12 +146,13 @@ header nav h1 {
 }
 
 .foto-animada {
-    position: relative;  /* referência para o rastro */
-    display: inline-block;
-    width: 260px;        /* tamanho da foto */
-    height: 260px;
-    margin-right: 100px; /* mantém a margem antiga */
-    float: none;         
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 260px;
+  height: 260px;
+  margin-right: 100px;
 }
 
 /* Foto */
@@ -165,18 +166,19 @@ header nav h1 {
 
 /* Rastro girando */
 .rastro {
-    position: absolute;
-    top: 54.3%;
-    left: 55%;
-   width: 260px;
-   height: 260px;
-    margin: -145px 0 0 -145px; /* centraliza o rastro no meio da foto */
-    border: 3px solid transparent;
-    border-top: 3px solid #0A66C2; /* traço visível */
-    border-radius: 50%;
-    animation: girar-rastro 2s linear infinite;
-    pointer-events: none; /* para não interferir com a foto */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 260px;
+  height: 260px;
+  transform: translate(-50%, -50%);
+  border: 3px solid transparent;
+  border-top: 3px solid #0A66C2;
+  border-radius: 50%;
+  animation: girar-rastro 2s linear infinite;
+  pointer-events: none;
 }
+
 
 @keyframes girar-rastro {
     0% { transform: rotate(0deg); }
@@ -285,18 +287,16 @@ header nav h1 {
   }
 
   /* FOTO */
-  .foto-animada {
-    margin-right: 0;
-    margin-top: 30px;
-    width: 200px;
-    height: 200px;
-  }
+.foto-animada {
+  margin: 30px auto 0;
+  width: 200px;
+  height: 200px;
+}
 
-  .rastro {
-    width: 200px;
-    height: 200px;
-    margin: -100px 0 0 -100px;
-  }
+ .rastro {
+  width: 200px;
+  height: 200px;
+}
 
   /* ÍCONES */
   .menu-icones {

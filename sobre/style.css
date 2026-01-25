@@ -24,7 +24,7 @@ header {
 
 header nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end; /* SEMPRE direita */
   align-items: center;
 }
 
@@ -179,9 +179,10 @@ h3 {
 
 /* ===== RESPONSIVIDADE ===== */
 @media (max-width: 768px) {
+
+  /* HEADER / MENU */
   header nav {
-    flex-direction: column;
-    gap: 15px;
+    justify-content: center; /* centraliza no mobile */
   }
 
   header nav ul {
@@ -190,6 +191,7 @@ h3 {
     gap: 15px;
   }
 
+  /* RESTO CONTINUA IGUAL */
   .container-sobre {
     padding: 0 20px;
   }
