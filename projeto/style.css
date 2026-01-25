@@ -78,26 +78,34 @@ header nav ul li a:hover {
 
 /*pro seçao de projeto */
 
-.projetos-container {
+.projetos-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
-  justify-content: center;
   margin-top: 30px;
-  
-  
 }
+
+/* .projetos-container não precisa de estilos */
+
 
 .card-projeto {
   background: #151313;
   border: 1px solid #333;
   border-radius: 10px;
   padding: 20px;
-  transition: transform 0.3s ease;
-  margin-bottom: 10px;
-  color:white;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 380px;
 }
 
+
+.botoes {
+  margin-top: auto;
+}
+/*pros botoes ficarem alinhados**/
 
 
 
@@ -192,8 +200,12 @@ header nav ul li a:hover {
 }
 
 .tecnologias {
-margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
 }
+
 
 
 .tech {
