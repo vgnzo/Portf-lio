@@ -169,8 +169,8 @@ header nav h1 {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 260px;
-  height: 260px;
+  width: 100%;
+  height: 100%;
   transform: translate(-50%, -50%);
   border: 3px solid transparent;
   border-top: 3px solid #0A66C2;
@@ -178,6 +178,9 @@ header nav h1 {
   animation: girar-rastro 2s linear infinite;
   pointer-events: none;
 }
+
+
+
 
 
 @keyframes girar-rastro {
