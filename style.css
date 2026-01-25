@@ -1,5 +1,5 @@
 html, body {
-    overflow-x: hidden; /* se quiser, remove a rolagem */
+    overflow-x: hidden;
     height: 100vh;
 }
 
@@ -10,7 +10,7 @@ body {
     padding: 0;
 }
 
-/* Menu  links*/
+/* ================= MENU ================= */
 header {
   text-align: center;
   color: white;
@@ -26,227 +26,162 @@ header nav {
   align-items: center;
 }
 
-
-
-
 header nav ul {
   list-style: none;
   display: flex;
   gap: 25px;
-   justify-content: right;
+  justify-content: right;
   padding: 0;
   margin: 0;
-  
 }
 
 header nav ul li a {
-    color: rgb(227, 226, 226);
-    text-decoration: none;
-    transition: color 0.3s;
-    display: flex;        
-    align-items: center;  
-    gap: 8px;  
-    font-size: 1rem;          
+  color: rgb(227, 226, 226);
+  text-decoration: none;
+  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
 }
 
 header nav ul li a:hover {
   color: #0328cb;
 }
 
-header nav h1 {
-    margin: 0;
-    color: rgb(255, 252, 252);
-    
+/* ================= EFEITO NOME ================= */
+.efeito {
+  position: relative;
+  display: inline-block;
+  font-size: 2rem;
+  color: white;
 }
 
-
 .efeito::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0;
-    height: 3px;
-    background: linear-gradient(90deg, #f7f4f4, #0080ff);
-    transition: width 0.5s ease;
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #f7f4f4, #0080ff);
+  transition: width 0.5s ease;
 }
 
 .efeito:hover::after {
-    width: 100%;
+  width: 100%;
 }
 
-.efeito {
-    position: relative;
-    display: inline-block;
-    font-size: 2rem;
-    color: white;
-}
-
-
-
-
-
-
-
-/* Seção Apresentação */
+/* ================= APRESENTAÇÃO ================= */
 #apresentacao {
- text-align: left;
-    padding-top: 150px; /* quanto maior o número, mais baixo fica */
-  
- 
-
+  padding-top: 150px;
 }
 
-/* Container que organiza foto e texto */
 .container-apresentacao {
-    display: flex;
-    align-items: center;             /* centraliza verticalmente */
-    justify-content: space-between;  /* espaço entre texto e foto */
-    gap: 20px;                       /* distância entre elementos */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
 }
 
-/* Texto da apresentação */
+/* TEXTO */
 .texto-apresentacao {
-    max-width: 900px;
-    color: white;
-   margin-left: 150px;
-  
- 
-   
+  max-width: 900px;
+  color: white;
+  margin-left: 150px;
 }
 
 .texto-apresentacao h1 {
-    font-size: 44px;
-    font-weight: bold;
-    margin-bottom: 35px;   /*distancia de uma linha pra outra*/
-    margin-top: 30px;
-   
-  }
+  font-size: 44px;
+  margin-bottom: 35px;
+}
 
 .texto-apresentacao h3 {
-    font-size: 26px;
-    color: #ffffff;
-    margin-bottom: 25px;
+  font-size: 26px;
+  margin-bottom: 25px;
 }
 
 .texto-apresentacao p {
-    font-size: 15px;
-    line-height: 1.5;
-    margin-bottom: 20px;
+  font-size: 15px;
+  line-height: 1.5;
 }
 
-/* Foto */
-#apresentacao img {
-    width: 260px;
-    height: 260px;
-    border-radius: 50%;  /* deixa circular */
-    object-fit: cover;
-    margin-right: 100px;
-    float: none;         /* remove float antigo */
-}
-
+/* ================= FOTO + RASTRO ================= */
 .foto-animada {
   position: relative;
+  width: 260px;
+  height: 260px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 260px;
-  height: 260px;
   margin-right: 100px;
 }
 
-/* Foto */
 .foto-animada img {
-    width: 100%;
-    height: 100%;
-    border-radius: 100%;
-    object-fit: cover;
-    display: block;      /* evita espaços em linha */
-}
-
-/* Rastro girando */
-.rastro {
-  position: absolute;
-  top: 50%;
-  left: 50%;
   width: 100%;
   height: 100%;
-  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  object-fit: cover;
+  z-index: 2;
+}
+
+/* RASTRO CORRIGIDO */
+.rastro {
+  position: absolute;
+  inset: 0; /* substitui top/left/translate */
+  border-radius: 50%;
   border: 3px solid transparent;
   border-top: 3px solid #0A66C2;
-  border-radius: 50%;
   animation: girar-rastro 2s linear infinite;
   pointer-events: none;
+  z-index: 1;
 }
-
-
-
-
 
 @keyframes girar-rastro {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
 }
 
-
-
-
+/* ================= ÍCONES ================= */
 .menu-icones {
   display: flex;
-  gap: 35px; /* distância entre os ícones */
-  margin-top: 20px; /* espaço abaixo do texto ou menu */
-   justify-content: flex-start; /* alinha à esquerda */
-  margin-left: 150px;     
-  
+  gap: 35px;
+  margin-top: 20px;
+  margin-left: 150px;
 }
 
 .menu-icones a {
-  color: white; /* cor dos ícones */
-  font-size: 37px; /* tamanho dos ícones */
+  font-size: 37px;
   transition: color 0.3s;
-
-    display: flex;
-  gap: 20px; /* distância entre os ícones */
-  justify-content: center; /* centraliza horizontalmente */
-  margin-top: 20px; /* espaço abaixo do texto ou menu */
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-/* Cores individuais */
-.menu-icones a.linkedin { color: #0A66C2; }  /* azul LinkedIn */
-.menu-icones a.github   { color: #3b3636; }  /* preto GitHub */
-.menu-icones a.twitter  { color: #1DA1F2; }  /* azul Twitter */
-.menu-icones a.instagram  { color: #a300a9; }
+/* cores */
+.menu-icones a.linkedin { color: #0A66C2; }
+.menu-icones a.github { color: #3b3636; }
+.menu-icones a.instagram { color: #a300a9; }
 
-/* Hover individual se quiser mudar ao passar o mouse */
-.menu-icones a.linkedin:hover { color: #ffffff; }
-.menu-icones a.github:hover   { color: #e2e2e2; }
-.menu-icones a.twitter:hover  { color: #e2e7ea; }
-.menu-icones a.instagram:hover  { color: #e9e7ea; }
-.menu-icones a.btn-cv:hover {
-  background-color: #e0e0e0;  /* vermelho mais escuro ao passar o mouse */
-}
-
+/* botão CV */
 .menu-icones a.btn-cv {
-
-  font-size: 24px;  
-  background-color: #e21111;  /* vermelho */
-  color: white;               /* texto e ícone branco */
-  padding: 5px 10px;          /* espaço interno do botão */
-  border-radius: 10px;         /* cantos arredondados */
-  text-decoration: none;      /* remove underline */
-  display: flex;              /* pra alinhar ícone e texto */
-  gap: 8px;                   /* espaço entre ícone e texto */
-  transition: background 0.3s; /* efeito suave ao passar o mouse */
+  font-size: 24px;
+  background-color: #e21111;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  text-decoration: none;
 }
 
+.menu-icones a.btn-cv:hover {
+  background-color: #c70f0f;
+}
 
-
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
 
-  /* MENU */
   header {
     top: 20px;
-    padding: 10px;
   }
 
   header nav {
@@ -261,7 +196,6 @@ header nav h1 {
     font-size: 14px;
   }
 
-  /* APRESENTAÇÃO */
   #apresentacao {
     padding-top: 80px;
     text-align: center;
@@ -269,7 +203,6 @@ header nav h1 {
 
   .container-apresentacao {
     flex-direction: column;
-    align-items: center;
   }
 
   .texto-apresentacao {
@@ -289,24 +222,17 @@ header nav h1 {
     font-size: 14px;
   }
 
-  /* FOTO */
-.foto-animada {
-  margin: 30px auto 0;
-  width: 200px;
-  height: 200px;
-}
+  .foto-animada {
+    margin: 30px auto 0;
+    width: 200px;
+    height: 200px;
+  }
 
- .rastro {
-  width: 200px;
-  height: 200px;
-}
-
-  /* ÍCONES */
   .menu-icones {
     margin-left: 0;
     justify-content: center;
-    gap: 20px;
     flex-wrap: wrap;
+    gap: 20px;
   }
 
   .menu-icones a {
