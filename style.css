@@ -1,6 +1,6 @@
 html, body {
     overflow: hidden; /* se quiser, remove a rolagem */
-    height: 100%;
+    height: auto;
 }
 
 body {
@@ -232,4 +232,86 @@ header nav h1 {
   display: flex;              /* pra alinhar ícone e texto */
   gap: 8px;                   /* espaço entre ícone e texto */
   transition: background 0.3s; /* efeito suave ao passar o mouse */
+}
+
+
+
+@media (max-width: 768px) {
+
+  /* MENU */
+  header {
+    top: 20px;
+    padding: 10px;
+  }
+
+  header nav {
+    justify-content: center;
+  }
+
+  header nav ul {
+    gap: 15px;
+  }
+
+  header nav ul li a {
+    font-size: 14px;
+  }
+
+  /* APRESENTAÇÃO */
+  #apresentacao {
+    padding-top: 80px;
+    text-align: center;
+  }
+
+  .container-apresentacao {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .texto-apresentacao {
+    margin-left: 0;
+    max-width: 90%;
+  }
+
+  .texto-apresentacao h1 {
+    font-size: 32px;
+  }
+
+  .texto-apresentacao h3 {
+    font-size: 18px;
+  }
+
+  .texto-apresentacao p {
+    font-size: 14px;
+  }
+
+  /* FOTO */
+  .foto-animada {
+    margin-right: 0;
+    margin-top: 30px;
+    width: 200px;
+    height: 200px;
+  }
+
+  .rastro {
+    width: 200px;
+    height: 200px;
+    margin: -100px 0 0 -100px;
+  }
+
+  /* ÍCONES */
+  .menu-icones {
+    margin-left: 0;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .menu-icones a {
+    font-size: 26px;
+  }
+
+  .menu-icones a.btn-cv {
+    font-size: 16px;
+    padding: 8px 12px;
+  }
 }

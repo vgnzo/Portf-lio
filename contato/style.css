@@ -1,7 +1,14 @@
+/* ===== RESET ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
 }
 
 body {
@@ -11,71 +18,90 @@ body {
   line-height: 1.6;
 }
 
+/* ===== HEADER ===== */
 header {
   background-color: #161b22;
-  padding: 10px 20px;
-  position: relative;
-  text-align: center;
+  padding: 20px;
   border-bottom: 1px solid #30363d;
-  color: white;
 }
 
 header nav {
   display: flex;
-  justify-content: right; /* changed from center to right for better alignment */
+  justify-content: flex-end;
   align-items: center;
 }
 
 header nav ul {
   list-style: none;
   display: flex;
-  justify-content: right; /* changed from center to right */
-  gap: 29px; /* diminuindo de 15px para 8px para reduzir ainda mais o espaço entre ícones */
-  margin: 0;
-  padding: 0;
+  gap: 25px;
 }
 
 header nav ul li a {
   color: rgb(227, 226, 226);
   text-decoration: none;
-  transition: color 0.3s;
   display: flex;
   align-items: center;
   gap: 8px;
+  transition: color 0.3s;
 }
 
 header nav ul li a:hover {
-  color: #0328cb; /* changed to azul as requested */
+  color: #0328cb;
 }
 
+/* ===== CONTAINER PRINCIPAL ===== */
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 60px 20px;
 }
 
+/* ===== TÍTULO ===== */
 .container h1 {
   text-align: center;
   font-size: 2.5rem;
-  margin-bottom: 40px;
-  color: white;
+  margin-bottom: 30px;
 }
 
+.titulo-secao {
+  position: relative;
+  display: inline-block;
+  font-size: 2rem;
+}
+
+.titulo-secao::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #00ffff, #0080ff);
+  transition: width 0.4s ease;
+}
+
+.titulo-secao:hover::after {
+  width: 100%;
+}
+
+/* ===== INTRO ===== */
 .contato-intro {
   text-align: center;
   margin-bottom: 50px;
 }
 
 .contato-intro p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #c9d1d9;
   max-width: 600px;
   margin: 0 auto;
 }
 
+/* ===== CARDS DE CONTATO ===== */
 .contatos-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 30px;
 }
 
@@ -89,9 +115,9 @@ header nav ul li a:hover {
 }
 
 .contato-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transform: translateY(-6px);
   border-color: #58a6ff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
 }
 
 .contato-card i {
@@ -101,9 +127,8 @@ header nav ul li a:hover {
 }
 
 .contato-card h3 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   margin-bottom: 10px;
-  color: white;
 }
 
 .contato-card p {
@@ -111,71 +136,59 @@ header nav ul li a:hover {
   margin-bottom: 20px;
 }
 
+/* ===== BOTÃO ===== */
 .btn {
   display: inline-block;
   background-color: #238636;
   color: white;
-  padding: 10px 20px;
-  text-decoration: none;
+  padding: 10px 22px;
   border-radius: 6px;
-  transition: background-color 0.3s;
+  text-decoration: none;
   font-weight: 500;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .btn:hover {
   background-color: #2ea043;
+  transform: translateY(-2px);
 }
 
+/* ===== STATUS ===== */
 .status {
+  display: inline-block;
   background-color: #1f6feb;
   color: white;
-  padding: 5px 12px;
-  border-radius: 12px;
+  padding: 6px 14px;
+  border-radius: 14px;
   font-size: 0.9rem;
   font-weight: 500;
 }
 
+/* ===== RESPONSIVIDADE ===== */
 @media (max-width: 768px) {
-  header {
-    text-align: center;
-    color: white;
-    padding: 10px 20px;
-    position: relative;
+  header nav {
+    justify-content: center;
   }
 
   header nav ul {
-    flex-direction: column;
-    gap: 5px; /* diminuindo de 8px para 5px no mobile para deixar ícones ainda mais próximos */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
   }
 
-  .contatos-container {
-    grid-template-columns: 1fr;
+  .container {
+    padding: 40px 15px;
+  }
+
+  .container h1 {
+    font-size: 2rem;
+  }
+
+  .contato-intro p {
+    font-size: 1rem;
   }
 
   .contato-card {
     padding: 25px;
   }
-}
-
-
-.titulo-secao {
-    position: relative;
-    display: inline-block;
-    font-size: 2rem;
-    color: white;
-}
-
-.titulo-secao::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0;
-    height: 3px;
-    background: linear-gradient(90deg, #00ffff, #0080ff);
-    transition: width 0.5s ease;
-}
-
-.titulo-secao:hover::after {
-    width: 100%;
 }
