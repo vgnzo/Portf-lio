@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (btnCV) {
     btnCV.addEventListener("click", (e) => {
-      fetch("assets/Curriculo.pdf")
+      fetch("https://www.portfoliovg.com.br/assets/Curriculo.pdf")
         .then((response) => {
           if (response.ok) {
             console.log("CV encontrado, iniciando download...")
