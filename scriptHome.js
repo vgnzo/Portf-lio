@@ -1,19 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const btnCV = document.querySelector(".btn-cv")
-
-  if (btnCV) {
-    btnCV.addEventListener("click", (e) => {
-      fetch("https://www.portfoliovg.com.br/assets/Curriculo.pdf")
-        .then((response) => {
-          if (response.ok) {
-            console.log("CV encontrado, iniciando download...")
-          } else {
-            throw new Error("CV não encontrado")
-          }
-        })
-    })
-  }
-
   // Efeitos hover nos ícones sociais
   const iconesMenu = document.querySelectorAll(".menu-icones a")
 
