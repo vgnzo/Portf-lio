@@ -1,23 +1,16 @@
-// Script para melhorar a funcionalidade do botão de CV
 document.addEventListener("DOMContentLoaded", () => {
   const btnCV = document.querySelector(".btn-cv")
 
   if (btnCV) {
     btnCV.addEventListener("click", (e) => {
-      // Verifica se o arquivo CV existe
-      fetch("meu-cv.pdf")
+      fetch("assets/Curriculo.pdf")
         .then((response) => {
           if (response.ok) {
-            console.log("[v0] CV encontrado, iniciando download...")
-            // O download acontece automaticamente devido ao atributo download
-            setTimeout(() => {
-              alert("Download do CV iniciado! Verifique sua pasta de downloads.")
-            }, 500)
+            console.log("CV encontrado, iniciando download...")
           } else {
             throw new Error("CV não encontrado")
           }
         })
-    
     })
   }
 
