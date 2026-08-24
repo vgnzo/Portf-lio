@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Certificados - Vinicius</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="../index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="../sobre/sobre.html"><i class="fa-solid fa-user"></i> Sobre</a></li>
+        <li><a href="../projeto/projetos.html"><i class="fa-solid fa-folder"></i> Projetos</a></li>
+        <li><a href="../contato/contato.html"><i class="fa-solid fa-address-book"></i> Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="certificados">
+    <div class="container-certificados">
+
+      <div class="texto-certificados">
+        <h1 class="titulo-secao">Certificados</h1>
+        <p class="subtitulo">Cursos e formações que fiz por fora da graduação, com foco em back-end, dados e automação.</p>
+      </div>
+
+      <!-- Filtros -->
+      <div class="filtros">
+        <button class="filtro ativo" data-filtro="todos">Todos</button>
+        <button class="filtro" data-filtro="python">Python</button>
+        <button class="filtro" data-filtro="dados">Dados</button>
+        <button class="filtro" data-filtro="web">Web</button>
+      </div>
+
+      <div class="certificados-grid">
+
+        <!-- Certificado 1 -->
+        <div class="card-certificado" data-categoria="python dados web">
+          <div class="cert-topo">
+            <i class="fa-brands fa-python cert-icone"></i>
+            <span class="cert-carga">120h</span>
+          </div>
+          <h3>Formação Expert em Python</h3>
+          <p class="cert-instituicao">UNIFATEC / Daxus — Extensão universitária</p>
+          <p class="cert-descricao">Formação completa cobrindo fundamentos, recursos avançados da linguagem, análise de dados, automação, desenvolvimento web com Flask, introdução a IA e versionamento com Git/GitHub.</p>
+          <div class="cert-tags">
+            <span class="cert-tag">Análise de Dados</span>
+            <span class="cert-tag">Automação</span>
+            <span class="cert-tag">Flask</span>
+            <span class="cert-tag">IA</span>
+            <span class="cert-tag">Git</span>
+          </div>
+          <div class="cert-rodape">
+            <span class="cert-ano">Concluído em 2026</span>
+            <!-- TROCAR: link do PDF ou da validação do certificado -->
+            <a href="#" class="cert-link" target="_blank">Ver certificado <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+
+        <!-- Certificado 2 -->
+        <div class="card-certificado" data-categoria="python">
+          <div class="cert-topo">
+            <i class="fa-brands fa-python cert-icone"></i>
+          </div>
+          <h3>Primeiros Passos na Linguagem Python</h3>
+          <p class="cert-instituicao">Daxus</p>
+          <p class="cert-descricao">Base da linguagem: sintaxe, estruturas de dados, controle de fluxo e construção dos primeiros scripts.</p>
+          <div class="cert-tags">
+            <span class="cert-tag">Python</span>
+            <span class="cert-tag">Lógica</span>
+          </div>
+          <div class="cert-rodape">
+            <span class="cert-ano">2026</span>
+            <!-- TROCAR: link do PDF ou da validação do certificado -->
+            <a href="#" class="cert-link" target="_blank">Ver certificado <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+
+        <!-- Certificado 3 -->
+        <div class="card-certificado" data-categoria="python">
+          <div class="cert-topo">
+            <i class="fa-solid fa-desktop cert-icone"></i>
+          </div>
+          <h3>Criando um Projeto com Interface Gráfica em Python</h3>
+          <p class="cert-instituicao">Fundação Bradesco</p>
+          <p class="cert-descricao">Construção de aplicação desktop em Python, do layout da interface até a integração com a lógica da aplicação.</p>
+          <div class="cert-tags">
+            <span class="cert-tag">Python</span>
+            <span class="cert-tag">GUI</span>
+          </div>
+          <div class="cert-rodape">
+            <span class="cert-ano">2025</span>
+            <!-- TROCAR: link do PDF ou da validação do certificado -->
+            <a href="#" class="cert-link" target="_blank">Ver certificado <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+
+        <!-- Certificado 4 -->
+        <div class="card-certificado" data-categoria="dados">
+          <div class="cert-topo">
+            <i class="fa-solid fa-database cert-icone"></i>
+          </div>
+          <h3>Modelagem de Dados</h3>
+          <p class="cert-instituicao">Fundação Bradesco</p>
+          <p class="cert-descricao">Modelagem conceitual, lógica e física, normalização e relacionamento entre entidades em bancos relacionais.</p>
+          <div class="cert-tags">
+            <span class="cert-tag">SQL</span>
+            <span class="cert-tag">Normalização</span>
+            <span class="cert-tag">Modelagem</span>
+          </div>
+          <div class="cert-rodape">
+            <span class="cert-ano">2025</span>
+            <!-- TROCAR: link do PDF ou da validação do certificado -->
+            <a href="#" class="cert-link" target="_blank">Ver certificado <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+
+        <!-- Certificado 5 -->
+        <div class="card-certificado" data-categoria="web">
+          <div class="cert-topo">
+            <i class="fa-brands fa-angular cert-icone"></i>
+          </div>
+          <h3>Angular 19 — Do Iniciante ao Avançado</h3>
+          <p class="cert-instituicao">Udemy</p>
+          <p class="cert-descricao">Curso completo de Angular 19: componentes, serviços, roteamento, formulários, consumo de APIs REST e autenticação.</p>
+          <div class="cert-tags">
+            <span class="cert-tag">Angular</span>
+            <span class="cert-tag">TypeScript</span>
+            <span class="cert-tag">REST API</span>
+          </div>
+          <div class="cert-rodape">
+            <span class="cert-ano">2025</span>
+            <!-- TROCAR: link do PDF ou da validação do certificado -->
+            <a href="#" class="cert-link" target="_blank">Ver certificado <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+
+      </div>
+
+      <p class="vazio-msg" hidden>Nenhum certificado nessa categoria ainda.</p>
+
+    </div>
+  </section>
+
+  <script src="script-certificados.js"></script>
+</body>
+</html>
