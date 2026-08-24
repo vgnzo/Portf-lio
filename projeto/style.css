@@ -199,12 +199,13 @@ header nav ul li a:hover {
 .card-projeto {
   position: relative; /* necessário pro badge */
 }
-
-.card-projeto.destaque {
-  border-color: #00ffff44;
+/* ===== BADGES DOS CARDS ===== */
+.card-projeto {
+  position: relative;
 }
 
-.badge-destaque {
+.badge-producao,
+.badge-neutro {
   position: absolute;
   top: -11px;
   right: 20px;
